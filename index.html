@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="The Personal Page of Guy Hawkins">
+      <meta name="author" content="Guy Hawkins">
+      <title>Guy Hawkins</title>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <!-- Add custom CSS here -->
+      <link href="css/main.css" rel="stylesheet">
+      <!-- favicon     -->
+      <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="icon" type="image/ico" href="./favicon.ico" >
+   </head>
+   <body>
+      <!-- Side Menu -->
+      <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+      <div id="sidebar-wrapper">
+         <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand"><a href="#">Guy Hawkins</a>
+            </li>
+            <li><a href="#top">Home</a>
+            </li>
+            <li><a href="#about">Projects</a>
+            </li>
+            <li><a href="#contact">Contact</a>
+            </li>
+         </ul>
+      </div>
+      <!-- /Side Menu -->
+      </div>
+
+
+      <!-- Header -->
+      <div id="top" class="header">
+         <div class="vert-text-header">
+            <h1>Guy Hawkins</h1>
+         </div>
+         <div class="planet"></div>
+      <div class="moon"></div>
+      <div class="header-button"><center><a href="#about"><i class="button-icon fa fa-arrow-down" style="color:white"></i></a></p></center></div>
+      </div>
+      <!-- /Header -->  
+      <!-- About -->
+      <div id="about" class="carousel slide" data-ride="false">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+            <li data-target="#about" data-slide-to="0" class=""></li>
+            <li data-target="#about" data-slide-to="1" class="active"></li>
+            <li data-target="#about" data-slide-to="2" class=""></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="item">
+              <a href="https://goldenretrievers.herokuapp.com/">
+                <center><i class="earth-icon fa fa-globe" style="color:blue"></i></center>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>World Crisis Database</h1>
+                  </a>
+                    <p>Group project for cs373 Software Engineering. A scalable, dynamic website that imitates the flow of IMDB. We used Django to model our data, Postgres to store our data, Frontend is mainly Bootstrap, served by Heroku.</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="item active">
+              <a href="http://surewalk.herokuapp.com/">
+                <center><img class="project-icon" src="img/sw.png"></img></center>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>SURE Walk</h1></a>
+                        <p>A cross-platform service developed for the student gov. organization, SURE Walk. It allows a UT student to initiate a SURE Walk request through an Android or iPhone app. Org members are alerted and requests are displayed securely on their personalized website.</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="item">
+              <a href="https://github.com/GHawk1ns/MorseCodeGenerator">
+                <center><i class="project-icon fa fa-android" style="color:#A4C739"></i></center>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Morse Code Creator</h1></a>
+                 </a>
+                     <p>My first Android app! It converts text to Morse code via the flash on your phone</p>
+                  </div>
+                </div>
+            </div>
+
+
+         </div>
+         <!--/carousel inner -->
+         <a class="left carousel-control" data-target="#about" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+         <a class="right carousel-control" data-target="#about" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+      <!-- /About -->
+      <!-- Contacts -->
+      <div id="contact" class="contact-bar">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 text-center">
+                  <ul class="list-inline">
+                     <li>
+                        <a href="mailto:texasgh@gmail.com">
+                        <i class="contact-icon fa fa-envelope"style="color:yellow"></i></a><p>Email</p>
+                     </li>
+                     <li>
+                        <a href="http://facebook.com/ghawk1ns"><i class="contact-icon fa fa-facebook" style="color:white"></i></a><p>Facebook</p>
+                     </li>
+                     <li>
+                        <a href="http://github.com/ghawk1ns"><i class="contact-icon fa fa-github" style="color:black"></i></a><p>Github</p>
+                     </li>
+                     <li>
+                        <a href="http://twitter.com/ghawk1ns"><i class="contact-icon fa fa-twitter" style="color:#55acee"></i></a><p>Twitter</p>
+                     </li>
+                     <li>
+                        <a href="https://plus.google.com/+GuyHawkins/posts"><i class="contact-icon fa fa-google-plus" style="color:red"></i></a><p>Google+</p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- /Contacts -->    
+      
+
+      <!-- Banner -->
+      <div id="top" class="parallax-bg">
+         <div class="row" style="opacity:0.4;">
+            <img class="img-portfolio img-responsive" src="img/GuyHawkins.png">
+         </div>
+      </div>
+      <!-- /Banner -->
+      
+      <!-- Footer -->
+      <footer >
+         <div class="container">
+            <div class="row">
+               <center>
+			      <a href="#top"><i class="button-icon fa fa-arrow-up" style="color:#c2c009"></i></a></p>
+                  <p>Copyright &copy; Guy "ghawk1ns" Hawkins 2014</p>
+               </center>
+            </div>
+         </div>
+      </footer>
+      <!-- /Footer -->
+      <!-- JavaScript -->
+      <script src="js/jquery-1.10.2.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/map.js"></script>
+      <!-- Side Menu and Smooth Scrolling -->
+      <script>
+         $("#menu-close").click(function(e) {
+             e.preventDefault();
+             $("#sidebar-wrapper").toggleClass("active");
+         });
+      </script>
+      <script>
+         $("#menu-toggle").click(function(e) {
+             e.preventDefault();
+             $("#sidebar-wrapper").toggleClass("active");
+         });
+      </script>
+      <script>
+         $(function() {
+             $('a[href*=#]:not([href=#])').click(function() {
+                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+         
+                     var target = $(this.hash);
+                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                     if (target.length) {
+                         $('html,body').animate({
+                             scrollTop: target.offset().top
+                         }, 1000);
+                         return false;
+                     }
+                 }
+             });
+         });
+      </script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+     <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+     <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+     <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+           //.parallax(xOffset, xSpeedFactor, ySpeedFactor, yOffset) {
+           //xOffset: Horizontal offset from base as integer
+           //xSpeedFactor: Horizontal travel speed as float
+           //ySpeedFactor: Vertical travel speed as float
+           //yOffset: Vertical offset as integer (px)
+           $('.planet').parallax(100, .2, 10, .2);
+           $('.moon').parallax(75, -.35, 20, .50);
+})
+</script>
+   </body>
+</html>

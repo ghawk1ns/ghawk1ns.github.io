@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SURE Walk</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/surewalk.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+    
+    <script
+		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+	</script>
+	
+	<script>
+		
+		var center =new google.maps.LatLng(30.284085,-97.722790);
+		var w=new google.maps.LatLng(30.283709,-97.751842);
+		var x=new google.maps.LatLng(30.278520,-97.730470);
+		var y=new google.maps.LatLng(30.286599,-97.725320);
+		var z=new google.maps.LatLng(30.295493,-97.742701);
+		
+		function initialize()
+		{
+		var mapProp = {
+		  center:center,
+		  zoom:14,
+		  scaleControl: false,
+		  scrollwheel: false,
+		  mapTypeId: google.maps.MapTypeId.ROADMAP
+		  };
+		  
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		
+		var all = [
+		    new google.maps.LatLng(29.140167, -101),
+		    new google.maps.LatLng(32.392718, -100.9863),
+		    new google.maps.LatLng(32.466902, -94.174805),
+		    new google.maps.LatLng(28.568844, -94.394531)];
+  
+		var border= [new google.maps.LatLng(30.2933, -97.7418),new google.maps.LatLng(30.29365, -97.74720),new google.maps.LatLng(30.29327, -97.74698),new google.maps.LatLng(30.29274, -97.74703),new google.maps.LatLng(30.29228, -97.74740),new google.maps.LatLng(30.29212, -97.74760),new google.maps.LatLng(30.29153, -97.75061),new google.maps.LatLng(30.29117, -97.75103),new google.maps.LatLng(30.29063, -97.75147),new google.maps.LatLng(30.28979, -97.75216),new google.maps.LatLng(30.28905, -97.75259),new google.maps.LatLng(30.28854, -97.75278),new google.maps.LatLng(30.28673, -97.75319),new google.maps.LatLng(30.28640, -97.75321),new google.maps.LatLng(30.28558, -97.75318),new google.maps.LatLng(30.28530, -97.75312),new google.maps.LatLng(30.28483, -97.75294),new google.maps.LatLng(30.28432, -97.75263),new google.maps.LatLng(30.28377, -97.75226),new google.maps.LatLng(30.28377, -97.75170),new google.maps.LatLng(30.28379, -97.75135),new google.maps.LatLng(30.28395, -97.75004),new google.maps.LatLng(30.28388, -97.74945),new google.maps.LatLng(30.28351, -97.74827),new google.maps.LatLng(30.27970, -97.73450),new google.maps.LatLng(30.27585, -97.73601),new google.maps.LatLng(30.27459, -97.73182),new google.maps.LatLng(30.278554,-97.730493),new google.maps.LatLng(30.28325, -97.72791),new google.maps.LatLng(30.28718, -97.726761),new google.maps.LatLng(30.28835, -97.72903),new google.maps.LatLng(30.28907, -97.72997),new google.maps.LatLng(30.28933, -97.73124),new google.maps.LatLng(30.28921, -97.73272),new google.maps.LatLng(30.28949, -97.73322),new google.maps.LatLng(30.29005, -97.73446),new google.maps.LatLng(30.29064, -97.73454),new google.maps.LatLng(30.29124, -97.73492),new google.maps.LatLng(30.29172, -97.73533),new google.maps.LatLng(30.29215, -97.73576),new google.maps.LatLng(30.29240, -97.73591),new google.maps.LatLng(30.29267, -97.73597),new google.maps.LatLng(30.29315, -97.73602),new google.maps.LatLng(30.29432, -97.73745),new google.maps.LatLng(30.29605, -97.74110),new google.maps.LatLng(30.29429, -97.74227)];
+		
+		
+		var coverage=new google.maps.Polygon({
+			paths: [all, border],
+		    strokeColor: "#c2c009",
+		    strokeOpacity: 0.8,
+		    strokeWeight: 2,
+		    fillColor: "#586784",
+		    fillOpacity: 0.5
+		  });
+		
+		coverage.setMap(map);
+		}
+	
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+<body>
+    <!-- Side Menu -->
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <div id="sidebar-wrapper">
+	    <ul class="sidebar-nav">
+	        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+	        <li class="sidebar-brand"><a href="#">SURE Walk</a>
+	        </li>
+	        <li><a href="#top">Home</a>
+	        </li>
+	        <li><a href="#about">About</a>
+	        </li>
+	        <li><a href="#request">Request a Walk</a>
+	        </li>
+	        <li><a href="#contact">Contact</a>
+	        </li>
+	        <li>
+	        </li>
+	        <li>Volunteer Login
+	        </li>
+	        <li>
+		        <form class="form-horizontal">
+				  <div class="control-group">
+				    <div class="controls">
+				      <input type="text" id="inputEmail" placeholder="Email">
+				    </div>
+				  </div>
+				  <div class="control-group">
+				    <div class="controls">
+				      <input type="password" id="inputPassword" placeholder="Password">
+				    </div>
+				  </div>
+				  <div class="control-group">
+				    <div class="controls">
+				      <button type="submit" class="btn">Sign in</button>
+				    </div>
+				  </div>
+				</form>
+	        </li>
+	    </ul>
+    </div>
+    <!-- /Side Menu -->
+
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+	    <div class="row">
+			<img class="img-portfolio img-responsive" src="img/surewalkWide.png">
+        </div>
+        <div class="row" id="header_row">
+		    <div class="col-md-2 col-md-offset-4">
+		      <img alt="Download in the App Store" class="center" src="./img/appstore.png">
+		    </div>
+		    <div class="col-md-2">
+		      <img alt="Download in the Google Play Store" class="center" src="./img/googleplay.png">
+		    </div>
+		  </div>
+
+    </div>
+    <!-- /Full Page Image Header Area -->
+
+    <!-- Intro -->
+    <div id="about" class="intro">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 text-center">
+                    <h2>SURE Walk is a student-run volunteer group that provides walks to and from campus to UT students, faculty, and staff, with the help of student volunteers. Volunteers are gathered from trusted organizations from around campus, such as Orange Jackets and APO to name a few, and include both males and females. </h2>
+    
+    <table class="table table-bordered table-condensed">
+					   <tbody>
+					      <tr>
+					         <td>Location:</td>
+					         <td>SAC 2.106</td>
+					      </tr>
+					      <tr>
+					         <td>Hours of Operation</td>
+					         <td>Monday – Thursday from 10 p.m. – 2 a.m.</td>
+					      </tr>
+					      <tr>
+					         <td>Phone</td>
+					         <td>512-232-9255</td>
+					      </tr>
+					      <tr>
+					         <td>Email</td>
+					         <td>surewalk.utsg@gmail.com</td>
+					      </tr>
+					      <tr>
+					         <td>Agency Director:</td>
+					         <td> Leigh Larson</td>
+					      </tr>
+					   </tbody>
+					</table>
+    
+    
+                    <p class="lead">An agency of Student Government, SURE Walk is in service Monday through Thursday from 10 p.m. – 2 a.m. during the fall and spring semesters. Upon ordering a walk, two volunteers, one male and one female, will meet you at your current location and walk you to your destination, whether it be on campus or in the greater campus neighborhoods.
+</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Intro -->
+    <div id="request">
+    	    <div id="requestBox">
+	    	    <form class="form-horizontal">
+						<fieldset>
+						<!-- Form Name -->
+						<legend>Request a Walk</legend>
+						
+						<!-- Text input-->
+						<div class="control-group">
+						  <label class="control-label" for=""></label>
+						  <div class="controls">
+						    <input id="" name="" type="text" placeholder="name" class="input-xlarge" required="">
+						    
+						  </div>
+						</div>
+						
+						<!-- Text input-->
+						<div class="control-group">
+						  <label class="control-label" for=""></label>
+						  <div class="controls">
+						    <input id="" name="" type="text" placeholder="uteid" class="input-xlarge" required="">
+						    
+						  </div>
+						</div>
+						
+						<!-- Text input-->
+						<div class="control-group">
+						  <label class="control-label" for=""></label>
+						  <div class="controls">
+						    <input id="" name="" type="text" placeholder="email" class="input-xlarge" required="">
+						    
+						  </div>
+						</div>
+						
+						<!-- Text input-->
+						<div class="control-group">
+						  <label class="control-label" for=""></label>
+						  <div class="controls">
+						    <input id="" name="" type="text" placeholder="start" class="input-xlarge" required="">
+						    
+						  </div>
+						</div>
+						
+						<!-- Text input-->
+						<div class="control-group">
+						  <label class="control-label" for=""></label>
+						  <div class="controls">
+						    <input id="" name="" type="text" placeholder="destination" class="input-xlarge" required="">
+						    
+						  </div>
+						</div>
+						
+						<!-- Button -->
+						<div class="control-group">
+						  <label class="control-label" for="submit"></label>
+						  <div class="controls">
+						    <button id="submit" name="submit" class="btn btn-primary">Request</button>
+						  </div>
+						</div>
+						
+						</fieldset>
+					</form>
+    	    </div>
+			<div id="googleMap" style="width:100%;height:500px;"></div>
+    </div>
+    
+    <!-- parallax -->
+    <div id="contact" class="callout">
+       	<div class="portfolio-item">
+			<img class="img-portfolio img-responsive" src="img/surewalktrans.png">
+        </div>
+
+    </div>
+    <!-- a colord bar across screen -->
+    <div class="bar">
+		 <div class="container">
+            <div class="row">
+               <div class="col-md-6 col-md-offset-3 text-center">
+                  <ul class="list-inline">
+                     <li>
+                     	<a href="mailto:surewalk.utsg@gmail.com"><i class="fa fa-envelope fa-3x" style="color:white"></i></a>
+                     </li>
+                     <li>
+                     	<a href="http://facebook.com/surewalk"><i class="fa fa-facebook fa-3x" style="color:white"></i></a>
+                     </li>
+                     <li>
+                     	<a href="http://twitter.com/texassurewalk"><i class="fa fa-twitter fa-3x" style="color:white"></i></a>
+                     </li>
+                     <li>
+                     	<a href="http://github.com/"><i class="fa fa-github fa-3x" style="color:white"></i></a>
+                     </li>
+                     <li>
+                     <a href="http://utsg.org/projects/sure-walk/"><i class="fa fa-gavel fa-3x" style="color:white"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+    </div>
+    <!-- Footer -->
+    <footer >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">   
+                    
+                    <div class="top-scroll">
+                        <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
+                    </div>
+                    <hr>
+                    <p>Copyright &copy; SURE Walk 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+    <script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>
